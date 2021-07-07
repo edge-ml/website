@@ -32,6 +32,8 @@
                     <div class="align-self-center" style="font-size: 1.7em; max-width: 700px"><b>Open-Source End-To-End Embedded Machine Learning Toolkit</b></div>
                     <div class="align-self-center mt-5" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml helps developers <span class="highlight-green">build&nbsp;models&nbsp;faster</span> and <br><span class="highlight-green">more&nbsp;robustly</span> with an open-source toolchain for embedded machine learning.</div>
 
+                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;"><b>Try edge-ml in 5 minutes <i class="bi bi-arrow-right"></i></b></button>
+
                     
                 </div>
                 <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px"><h1><i class="bi bi-caret-down"></i></h1></div>
@@ -91,6 +93,10 @@
         <script>
             function openGithub() {
                 window.location = "https://github.com/edge-ml"
+            }
+            
+            function openDemo() {
+                window.open("http://edge-ml.dmz.teco.edu", '_blank').focus();
             }
 
 
