@@ -1,7 +1,7 @@
 /* set custom font */
 body {
     font-family: 'Montserrat', sans-serif !important;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
 .gradient-fill {
@@ -16,4 +16,29 @@ b {
 
 .highlight-green {
     border-radius: 5px; background: rgba(104, 211, 145, 0.2); color: rgb(154, 230, 180); padding: 5px;
+}
+
+@keyframes github-highlight {
+    from {
+        color: rgba(255,255,255,0.6);
+    }
+    to { 
+        color: white;
+    }
+}
+
+.github {
+    color: rgba(255,255,255,0.6);
+    font-size: 26px !important;
+    cursor: pointer;
+}
+
+.github:hover {
+    animation-name: github-highlight;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.infobox {
+    background: linear-gradient(rgb(26, 32, 44), rgb(45, 55, 72))
 }

@@ -12,6 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 
         <!-- Animate.css -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -19,35 +20,86 @@
         <!-- Custome Stylesheets -->
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body style="background: #e2e8f0">
+    <body style="background: white">
         <div class="container-fluid">
             <div class="row" style="color: white !important">
                 <div class="col-12">
                     <div style="position: absolute; top: 20px; left: 20px; font-size: 20px; color: white;"><b><i class="bi bi-soundwave"></i> edge-ml</b></div>
-                    <div class="" style="position: absolute; top: 10px; right: 10px"></div>
+                    <div onclick="openGithub()" class="github" style="position: absolute; top: 20px; right: 20px; font-size: 20px; "><b><i class="bi bi-github"></i></b></div>
                 </div>
                 <div class="col-12 gradient-fill text-center d-flex flex-column justify-content-center" style="height: 80vh">
                     
                     <div class="align-self-center" style="font-size: 1.7em; max-width: 700px"><b>Open-Source End-To-End Embedded Machine Learning Toolkit</b></div>
-                    <div class="align-self-center mt-5" style="max-width: 600px; font-size: 20px;">edge-ml helps developers <span class="highlight-green">build faster</span> and <span class="highlight-green">make fewer errors</span> with an open-source toolchain for embedded machine learning.</div>
-                    <button class="btn align-self-center mt-5 pt-3 pr-5 pl-5" style="background: rgba(255, 255, 255, 0.9);"><h5><span style="margin-right: 10px;"><i class="bi bi-github"></i></span>  GitHub </h5></button>
+                    <div class="align-self-center mt-5" style="max-width: 600px; font-size: 20px;">edge-ml helps developers <span class="highlight-green">build faster</span> and <br><span class="highlight-green">more robust models</span> with an open-source toolchain for embedded machine learning.</div>
+
                     
                 </div>
                 <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px"><h1><i class="bi bi-caret-down"></i></h1></div>
                 
             </div>
         </div>
-        <div class="container" style="background: #e2e8f0">
+        <div class="container" style="">
             <div class="row">
+                <div class="col-md-6 col-12 mt-4 d-flex flex-column align-items-center">
+                    <div class="mt-3 mb-3" style="color: gray"><b>DATA INJECTION</b></div>
+                    <div>
+                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">CSV</span>
+                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Arduino</span>
+                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Node.js</span>
+                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Android</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mt-4 d-flex flex-column align-items-center">
+                    <div class="mt-3 mb-3 text-right" style="color: gray"><b>MODEL DEPLOYMENT</b></div>
+                    <div class="d-flex flex-column align-items-center" style="opacity: 0.5">
+                        
+                        <div style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="Under Development">Arduino</div>
+                        <div style="font-size: small;"><i>Under Development</i></div>
+                    </div>
+                </div>
+                <hr class="mt-5">
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
                     <div class="mt-3" style="color: gray"><b>EDGE-ML FLOW</b></div>
                     <h3 class="" style="color: black"><b>Machine learning in minutes</b></h3>
                     <div class="mt-3">Central to edge-ml is our <b>flow</b> - with a few simple steps edge-ml lets you record data, label samples, train models and deploy validated embedded machine learning directly on the edge.</div>
                 </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" ></div>
+
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
+                    <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(74, 85, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
+                        <b>void</b> setup() {<br>
+                        &nbsp;&nbsp;&nbsp;// init<br>
+                        }<br>
+                        <br>
+                        <b>void</b> loop() {<br>
+                        &nbsp;&nbsp;&nbsp;// push data<br>
+                        }
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3" >
+                    <div class="mt-3" style="color: gray"><b>EDGE-ML CLIENTS</b></div>
+                    <h3 class="" style="color: black"><b>Simple data upload</b></h3>
+                    <div class="mt-3"  style="text-align: right;">edge-ml requires minimal initilization and supports upload in real-time as well as in bulk from the edge. Pre-recorded data can be simply drag-and-dropped as CSV files to the edge-ml cloud storage.</div>
+                </div>
+
             </div>
         </div>
+        <div class="container-fluid infobox">
+            
+        </div>
+
+        <script>
+            function openGithub() {
+                window.location = "https://github.com/edge-ml"
+            }
+
+
+            $(document).ready(function() { 
+                $('[data-toggle="tooltip"]').tooltip();    
+            }); 
+        </script>
         <!-- Load Bootstrap JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        
     </body>
 </html>
 
