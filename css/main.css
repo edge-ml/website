@@ -1,0 +1,19 @@
+/* set custom font */
+body {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 1.3rem;
+}
+
+.gradient-fill {
+    background: rgb(11,12,89);
+    background: linear-gradient(0deg, rgba(11,12,89,1) 0%, rgba(7,55,99,1) 100%);
+}
+
+b {
+    font-weight: 700;
+}
+
+
+.highlight-green {
+    border-radius: 5px; background: rgba(104, 211, 145, 0.2); color: rgb(154, 230, 180); padding: 5px;
+}
