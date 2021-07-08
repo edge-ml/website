@@ -29,10 +29,10 @@
                 </div>
                 <div class="col-12 gradient-fill text-center d-flex flex-column justify-content-center" style="height: 80vh">
                     
-                    <div class="align-self-center" style="font-size: 1.7em; max-width: 700px"><b>Open-Source End-To-End Embedded Machine Learning Toolchain</b></div>
-                    <div class="align-self-center mt-5" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml helps developers <span class="highlight-green">build&nbsp;models&nbsp;faster</span>&nbspand <br><span class="highlight-green">more&nbsp;robustly</span> with an open-source toolchain&nbsp;for embedded machine learning.</div>
+                    <div class="align-self-center" style="font-size: 1.7em; max-width: 700px"><b>End-To-End Embedded Machine Learning Toolchain</b></div>
+                    <div class="align-self-center mt-4" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml helps developers <span class="highlight-green">build&nbsp;models&nbsp;faster</span>&nbspand <br><span class="highlight-green">more&nbsp;robustly</span> with an open-source toolchain&nbsp;for embedded machine learning.</div>
 
-                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;"><b>Try edge-ml on the web <i class="bi bi-arrow-right"></i></b></button>
+                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4 shrink-on-hover" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;"><b>Try edge-ml on the web <i class="bi bi-arrow-right"></i></b></button>
                     
                 </div>
                 <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px"><h1><i class="bi bi-caret-down"></i></h1></div>
@@ -69,12 +69,14 @@
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
                     <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(74, 85, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
                         <span style="color: lightgray; opacity: 0.4">1</span>&nbsp; <b>void</b> setup() {<br>
-                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;// init<br>
+                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;edge.init('API_KEY')<br>
                         <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; }<br>
                         <span style="color: lightgray; opacity: 0.4">4</span>&nbsp; <br>
                         <span style="color: lightgray; opacity: 0.4">5</span>&nbsp; <b>void</b> loop() {<br>
-                        <span style="color: lightgray; opacity: 0.4">6</span>&nbsp; &nbsp;&nbsp;&nbsp;// push data<br>
-                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp; }
+                        <span style="color: lightgray; opacity: 0.4">6</span>&nbsp; &nbsp;&nbsp;&nbsp;value = sensor.read()<br>
+                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp; &nbsp;&nbsp;&nbsp;edge.submit('datasetName', 'sensorName', value)<br>
+                        
+                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp; }
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3" >
@@ -86,9 +88,9 @@
             </div>
         </div>
         <div class="infobox pb-5">
-            <div class="container" style="color: white">
+            <div class="container pb-3" style="color: white">
                 <div class="row">
-                    <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 ">
                         <div class="mt-3" style="color: lightgray"><b>FROM DATA COLLECTION TO DEPLOYMENT</b></div>
                         <h3 class="" style="color: white"><b>The straightforward edge-ml lifecyle</b></h3>
                     </div>
@@ -125,6 +127,46 @@
                 </div>
             </div>
         </div>
+
+        <div class="container pb-5" >
+            <div class="row pb-5">
+                <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
+                    <h3 class="" ><b>How does edge-ml fit in your stack?</b></h3>
+                </div>
+                <div class="col-12">
+                    <div style="border-color: transparent;" class="d-flex justify-content-center align-items-start flex-column text-left card shadow-lg p-0">
+                        <div class="card-body p-4">
+                            <h4 class="" ><b>The edge framework with more supported platforms</b></h4>
+                            
+                        </div>
+                        <hr style="width: 100%;">
+                        <button onclick="openGithub()" class="btn btn-success shrink-on-hover align-self-center mb-4 mt-2" style="background: rgb(72, 187, 120) !important; padding: 12px 15px; border-color: transparent;"><b>Learn more on GitHub&nbsp;&nbsp;<i class="bi bi-github"></i></b></button>
+                    
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5">
+            <div class="row">
+                <div class="col-4">
+                    <div style="font-size: 20px; color: #bbb;"><b><i class="bi bi-soundwave"></i> edge-ml</b></div>
+                    <div style="color: #bbb; font-size: small">edge-ml@teco.edu<br></div>
+                </div>
+                <div class="col-4 d-flex flex-column justify-content-start align-items-center" style="font-size: small; color: #bbb; font-style: bold;">
+                    <b>Made with &nbsp;<i class="bi bi-heart-fill pt-1" style="font-size: x-small;"></i> &nbsp;in Karlsruhe</b>
+                    <div>&copy; 2021</div>
+                </div>
+                <div class="col-4 text-right d-flex justify-content-center flex-column align-items-end text-right" style="color: #bbb; font-size: small; text-align: right;">
+                    <b>Imprint</b>
+                    
+                    TECO<br>
+                    Vincenz-Prießnitz-Str. 1<br>
+                    76131 Karlsruhe<br>
+                    <br>
+                    
+                </div>
+            </div>
+        </div>
+
         
 
         <script>
