@@ -2,47 +2,75 @@
     <head>
         <!-- Meta Tags -->
         <title>edge-ml: e2e machine learning on the edge</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Load Boostrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-        
+        <link
+        rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 
         <!-- Animate.css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link
+        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
         <!-- Custome Stylesheets -->
         <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" href="images/assets/soundwave.svg">
     </head>
     <body style="background: white">
         <div class="container-fluid">
             <div class="row" style="color: white !important">
                 <div class="col-12">
-                    <div style="position: absolute; top: 20px; left: 20px; font-size: 20px; color: white;"><b><i class="bi bi-soundwave"></i> edge-ml</b></div>
-                    <div onclick="openGithub()" class="github" style="position: absolute; top: 20px; right: 20px; font-size: 20px; "><b><i class="bi bi-github"></i></b></div>
+                    <div style="position: absolute; top: 20px; left: 20px; font-size: 20px; color: white;">
+                        <b>
+                            <i class="bi bi-soundwave"></i>
+                            edge-ml</b>
+                    </div>
+                    <div onclick="openGithub()" class="github" style="position: absolute; top: 20px; right: 20px; font-size: 20px; ">
+                        <b>
+                            <i class="bi bi-github"></i>
+                        </b>
+                    </div>
                 </div>
                 <div class="col-12 gradient-fill text-center d-flex flex-column justify-content-center" style="height: 80vh">
-                    
-                    <div class="align-self-center" style="font-size: 1.7em; max-width: 700px"><b>End-To-End Embedded Machine Learning Toolchain</b></div>
-                    <div class="align-self-center mt-4" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml helps developers <span class="highlight-green">build&nbsp;models&nbsp;faster</span>&nbspand <br><span class="highlight-green">more&nbsp;robustly</span> with an open-source toolchain&nbsp;for embedded machine learning.</div>
 
-                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4 shrink-on-hover" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;"><b>Try edge-ml on the web <i class="bi bi-arrow-right"></i></b></button>
-                    
+                    <div class="align-self-center" style="font-size: 1.7em; max-width: 700px">
+                        <b>End-To-End Embedded Machine Learning Toolchain</b>
+                    </div>
+                    <div class="align-self-center mt-4" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml helps developers
+                        <span class="highlight-green">build&nbsp;models&nbsp;faster</span>&nbspand
+                        <br><span class="highlight-green">more&nbsp;robustly</span>
+                        with an open-source toolchain&nbsp;for embedded machine learning.</div>
+
+                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4 shrink-on-hover" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;">
+                        <b>Try edge-ml on the web
+                            <i class="bi bi-arrow-right"></i>
+                        </b>
+                    </button>
+
                 </div>
-                <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px"><h1><i class="bi bi-caret-down"></i></h1></div>
-                
+                <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px">
+                    <h1>
+                        <i class="bi bi-caret-down"></i>
+                    </h1>
+                </div>
+
             </div>
         </div>
         <div class="container" style="">
             <div class="row">
                 <div class="col-md-6 col-12 mt-4 d-flex flex-column align-items-center">
-                    <div class="mt-3 mb-3" style="color: gray"><b>DATA INJECTION</b></div>
+                    <div class="mt-3 mb-3" style="color: gray">
+                        <b>DATA INJECTION</b>
+                    </div>
                     <div>
                         <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">CSV</span>
                         <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Arduino</span>
@@ -51,40 +79,58 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-12 mt-4 d-flex flex-column align-items-center">
-                    <div class="mt-3 mb-3 text-right" style="color: gray"><b>MODEL DEPLOYMENT</b></div>
+                    <div class="mt-3 mb-3 text-right" style="color: gray">
+                        <b>MODEL DEPLOYMENT</b>
+                    </div>
                     <div class="d-flex flex-column align-items-center" style="opacity: 0.5">
-                        
+
                         <div style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary" data-toggle="tooltip" data-placement="top" title="Under Development">Arduino</div>
-                        <div style="font-size: small;"><i>Under Development</i></div>
+                        <div style="font-size: small;">
+                            <i>Under Development</i>
+                        </div>
                     </div>
                 </div>
                 <hr class="mt-5">
-                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
-                    <div class="mt-3" style="color: gray"><b>EDGE-ML FLOW</b></div>
-                    <h3 class="" style="color: black"><b>Machine learning in minutes</b></h3>
-                    <div class="mt-3">Central to edge-ml is our <b>flow</b> - with a few simple steps edge-ml lets you record data, label samples, train models and deploy validated embedded machine learning directly on the edge.</div>
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5">
+                    <div class="mt-3" style="color: gray">
+                        <b>EDGE-ML FLOW</b>
+                    </div>
+                    <h3 class="" style="color: black">
+                        <b>Machine learning in minutes</b>
+                    </h3>
+                    <div class="mt-3">Central to edge-ml is our
+                        <b>flow</b>
+                        - with a few simple steps edge-ml lets you record data, label samples, train models and deploy validated embedded machine learning directly on the edge.</div>
                 </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center align-items-end flex-column pt-5 pb-5" >
+                <div class="col-12 col-md-6 d-flex justify-content-center align-items-end flex-column pt-5 pb-5">
                     <img height="230px" width="300px" src="images/cycle.png">
                 </div>
 
-                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5">
                     <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(74, 85, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
-                        <span style="color: lightgray; opacity: 0.4">1</span>&nbsp; <b>void</b> setup() {<br>
-                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder rec("URL", "API_KEY");<br>
-                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder= rec.getIncrementalRecorder("DATASET_NAME");<br>
-                            <span style="color: lightgray; opacity: 0.4">6</span>&nbsp; &nbsp;&nbsp;&nbsp;<b>while</b> (recording) {<br>
-                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.read();<br>
-                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder.addDataPoint('SENSOR_NAME', value);<br>
-                        <span style="color: lightgray; opacity: 0.4">9</span>&nbsp;&nbsp;&nbsp;&nbsp; }<br>
-                        <span style="color: lightgray; opacity: 0.4">10</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder.onComplete();<br>           
+                        <span style="color: lightgray; opacity: 0.4">1</span>&nbsp;
+                        <b>void</b>
+                        setup() {<br>
+                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder *rec = new Recorder("https://app.edge-ml.org", "API_KEY");<br>
+                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder= rec->getIncrementalRecorder("DATASET_NAME");<br>
+                        <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }<br>
+                        <br>
+                        <span style="color: lightgray; opacity: 0.4">1</span>&nbsp;
+                        <b>void</b>
+                        loop() {<br>
+                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.read();<br>
+                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder->addDataPoint('SENSOR_NAME', value);<br>
                         <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }
                     </div>
                 </div>
-                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3" >
-                    <div class="mt-3" style="color: gray"><b>EDGE-ML CLIENTS</b></div>
-                    <h3 class="" style="color: black"><b>Simple data upload</b></h3>
-                    <div class="mt-3"  style="text-align: right;">edge-ml requires minimal initilization and supports upload in real-time as well as in bulk from the edge. Pre-recorded data can be simply drag-and-dropped as CSV files to the edge-ml cloud storage.</div>
+                <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3">
+                    <div class="mt-3" style="color: gray">
+                        <b>EDGE-ML CLIENTS</b>
+                    </div>
+                    <h3 class="" style="color: black">
+                        <b>Simple data upload</b>
+                    </h3>
+                    <div class="mt-3" style="text-align: right;">edge-ml requires minimal initilization and supports upload in real-time as well as in bulk from the edge. Pre-recorded data can be simply drag-and-dropped as CSV files to the edge-ml cloud storage.</div>
                 </div>
 
             </div>
@@ -93,54 +139,86 @@
             <div class="container pb-3" style="color: white">
                 <div class="row">
                     <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 ">
-                        <div class="mt-3" style="color: lightgray"><b>FROM DATA COLLECTION TO DEPLOYMENT</b></div>
-                        <h3 class="" style="color: white"><b>The straightforward edge-ml lifecyle</b></h3>
+                        <div class="mt-3" style="color: lightgray">
+                            <b>FROM DATA COLLECTION TO DEPLOYMENT</b>
+                        </div>
+                        <h3 class="" style="color: white">
+                            <b>The straightforward edge-ml lifecyle</b>
+                        </h3>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-collection"></i></div>
-                        <div class="mt-3"><b>Collect</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-collection"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Collect</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Use our open-source libraries to collect data and push it to the edge-ml cloud.</div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-clouds"></i></div>
-                        <div class="mt-3"><b>Manage</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-clouds"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Manage</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Manage and delete datasets or synchronize different sensor streams</div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4  mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-clipboard"></i></div>
-                        <div class="mt-3"><b>Label</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-clipboard"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Label</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Use the web-based labeling tool to add or refine data labels and annotations.</div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-collection"></i></div>
-                        <div class="mt-3"><b>Train</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-collection"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Train</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Train embedded models with cloud-based computing resources.</div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-check"></i></div>
-                        <div class="mt-3"><b>Validate</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-check"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Validate</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Received detailed reports about model performance metrics.</div>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-5 d-flex justify-content-center align-items-center flex-column text-center">
-                        <div class="d-flex justify-content-center align-items-center green-circle" ><i class="bi bi-cpu"></i></div>
-                        <div class="mt-3"><b>Deploy</b></div>
+                        <div class="d-flex justify-content-center align-items-center green-circle">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <div class="mt-3">
+                            <b>Deploy</b>
+                        </div>
                         <div class="mt-2" style="font-size: medium;">Port your optimized edge model back to the embedded platform.</div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container pb-5" >
+        <div class="container pb-5">
             <div class="row pb-5">
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 mb-5">
-                    <h3 class="" ><b>How does edge-ml fit in your stack?</b></h3>
+                    <h3 class="">
+                        <b>How does edge-ml fit in your stack?</b>
+                    </h3>
                     <div class="text-center" style="max-width: 700px">edge-ml offers a set of comprehensive libraries for pushing timeseries data to the cloud. The same libraries can then pull models for prediction directly on the edge.</div>
                 </div>
 
                 <div class="col-12 mb-3">
                     <div style="border-color: transparent;" class="d-flex justify-content-center align-items-start flex-column text-left card shadow-lg p-0">
                         <div class="card-body p-4">
-                            <h4 class="mb-4" ><b>The edge framework for every situation</b></h4>
+                            <h4 class="mb-4">
+                                <b>The edge framework for every situation</b>
+                            </h4>
                             <div class="row mt-4">
                                 <div class="col-12 col-lg-4 mt-3">
                                     <div class="d-flex flex-row align-items-start">
@@ -170,21 +248,28 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            
+
+
                         </div>
                         <hr style="width: 100%;">
-                        <button onclick="openGithub()" class="btn btn-success shrink-on-hover align-self-center mb-4 mt-2" style="background: rgb(72, 187, 120) !important; padding: 12px 15px; border-color: transparent;"><b>Learn more on GitHub&nbsp;&nbsp;<i class="bi bi-github"></i></b></button>
-                    
+                        <button onclick="openGithub()" class="btn btn-success shrink-on-hover align-self-center mb-4 mt-2" style="background: rgb(72, 187, 120) !important; padding: 12px 15px; border-color: transparent;">
+                            <b>Learn more on GitHub&nbsp;&nbsp;<i class="bi bi-github"></i>
+                            </b>
+                        </button>
+
                     </div>
                 </div>
 
                 <div class="col-12 d-flex flex-column justify-content-center align-items-center mt-5 mb-4">
-                    <div class="mt-5" style="color: gray"><b>ENGAGE WITH EDGE-ML DEVELOPERS</b></div>
-                    <h3 class="" ><b>Join the thriving edge-ml community</b></h3>
+                    <div class="mt-5" style="color: gray">
+                        <b>ENGAGE WITH EDGE-ML DEVELOPERS</b>
+                    </div>
+                    <h3 class="">
+                        <b>Join the thriving edge-ml community</b>
+                    </h3>
                 </div>
 
-                
+
                 <div class="col-12">
                     <div class="row">
                         <div class="col-12 col-md-6">
@@ -192,11 +277,16 @@
                                 <img style="max-height: 180px; object-fit: cover" class="card-img-top" src="images/slides.PNG" alt="Card image cap">
                                 <div class="card-body d-flex flex-column justify-content-between">
                                     <div>
-                                        <h5><b>edge-ml on YouTube Tutorials</b></h5>
+                                        <h5>
+                                            <b>edge-ml on YouTube Tutorials</b>
+                                        </h5>
                                         <div style="font-size: medium;">The edge-ml YouTube channel aims to provide you with the latest updates, tutorials, and examples by the edge-ml developers as well as open-source contributors.</div>
                                     </div>
-                                    
-                                    <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover" disabled><b style="font-s"><i class="bi bi-youtube"></i>&nbsp; Coming Soon</b></button>
+
+                                    <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover" disabled>
+                                        <b style="font-s">
+                                            <i class="bi bi-youtube"></i>&nbsp; Coming Soon</b>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -204,63 +294,83 @@
                             <div class="card shadow-lg" style="border-color: transparent;">
                                 <div class="card-body d-flex flex-row">
                                     <div class="d-flex flex-column">
-                                        <h5><b>Join us on Slack</b></h5>
+                                        <h5>
+                                            <b>Join us on Slack</b>
+                                        </h5>
                                         <div style="font-size: medium;">Engage with a vibrant community of developers and companies adopting edge-ml.</div>
-                                        <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover"><b style="font-s">Join <i class="bi bi-arrow-right-short"></i></b></button>
+                                        <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover">
+                                            <b style="font-s">Join
+                                                <i class="bi bi-arrow-right-short"></i>
+                                            </b>
+                                        </button>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="card shadow-lg mt-3" style="border-color: transparent;">
                                 <div class="card-body">
                                     <div class="d-flex flex-column">
-                                        <h5><b>Github</b></h5>
+                                        <h5>
+                                            <b>Github</b>
+                                        </h5>
                                         <div style="font-size: medium;">Browse the edge-ml source code, send feedback or join the discussion on GitHub.</div>
                                         <div class="mt-4">
-                                            <button style="background: rgb(226, 232, 240); color: black; border: 0px solid white" onclick="sendFeedback()" class="btn btn-secondary mt-2 shrink-on-hover"><b style="font-s">Send feedback <i class="bi bi-arrow-right-short"></i></b></button>
-                                            <button style="background: rgb(226, 232, 240);color: black; border: 0px solid white" onclick="joinDiscussion()" class="btn btn-secondary mt-2 shrink-on-hover"><b style="font-s">Join the discussion <i class="bi bi-arrow-right-short"></i></b></button>
+                                            <button style="background: rgb(226, 232, 240); color: black; border: 0px solid white" onclick="sendFeedback()" class="btn btn-secondary mt-2 shrink-on-hover">
+                                                <b style="font-s">Send feedback
+                                                    <i class="bi bi-arrow-right-short"></i>
+                                                </b>
+                                            </button>
+                                            <button style="background: rgb(226, 232, 240);color: black; border: 0px solid white" onclick="joinDiscussion()" class="btn btn-secondary mt-2 shrink-on-hover">
+                                                <b style="font-s">Join the discussion
+                                                    <i class="bi bi-arrow-right-short"></i>
+                                                </b>
+                                            </button>
                                         </div>
-                                       
+
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </div>
                 </div>
 
-                
+
             </div>
             <hr class="mt-5">
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <div style="font-size: 20px; color: #bbb;"><b><i class="bi bi-soundwave"></i> edge-ml</b></div>
+                    <div style="font-size: 20px; color: #bbb;">
+                        <b>
+                            <i class="bi bi-soundwave"></i>
+                            edge-ml</b>
+                    </div>
                     <div style="color: #bbb; font-size: small">edge-ml@teco.edu<br></div>
                 </div>
                 <div class="col-12 col-md-4 d-flex flex-column justify-content-start align-items-center" style="font-size: small; color: #bbb; font-style: bold;">
-                    <b>Made with &nbsp;<i class="bi bi-heart-fill pt-1" style="font-size: x-small;"></i> &nbsp;in Karlsruhe</b>
+                    <b>Made with &nbsp;<i class="bi bi-heart-fill pt-1" style="font-size: x-small;"></i>
+                        &nbsp;in Karlsruhe</b>
                     <div>&copy; 2021</div>
                 </div>
                 <div class="col-12 col-md-4 text-right d-flex justify-content-center flex-column align-items-end text-right" style="color: #bbb; font-size: small; text-align: right;">
                     <b>Imprint</b>
-                    
+
                     <i>TECO (Pervasive Computing Systems)</i>
                     Karlsruhe Institute of Technology<br>
                     Vincenz-Prießnitz-Str. 1<br>
                     76131 Karlsruhe<br>
                     <br>
-                    
+
                 </div>
             </div>
         </div>
 
-        
 
         <script>
             function openGithub() {
                 window.open("https://github.com/edge-ml", '_blank').focus();
             }
-            
+
             function openDemo() {
                 window.open("http://edge-ml.dmz.teco.edu", '_blank').focus();
             }
@@ -271,21 +381,20 @@
 
             function sendFeedback() {
                 window.open("https://github.com/edge-ml/edge-ml/issues", '_blank').focus();
-                
+
             }
 
             function joinDiscussion() {
                 window.open("https://github.com/edge-ml/edge-ml/discussions", '_blank').focus();
-                
+
             }
 
-            
-            $(document).ready(function() { 
-                $('[data-toggle="tooltip"]').tooltip();    
-            }); 
+
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
         </script>
         <!-- Load Bootstrap JS-->
-        
+
     </body>
 </html>
-
