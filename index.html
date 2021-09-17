@@ -71,14 +71,14 @@
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5" >
                     <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(74, 85, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
                         <span style="color: lightgray; opacity: 0.4">1</span>&nbsp; <b>void</b> setup() {<br>
-                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;edge.init('API_KEY')<br>
-                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; }<br>
-                        <span style="color: lightgray; opacity: 0.4">4</span>&nbsp; <br>
-                        <span style="color: lightgray; opacity: 0.4">5</span>&nbsp; <b>void</b> loop() {<br>
-                        <span style="color: lightgray; opacity: 0.4">6</span>&nbsp; &nbsp;&nbsp;&nbsp;value = sensor.read()<br>
-                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp; &nbsp;&nbsp;&nbsp;edge.submit('datasetName', 'sensorName', value)<br>
-                        
-                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp; }
+                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder rec("URL", "API_KEY");<br>
+                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder= rec.getIncrementalRecorder("DATASET_NAME");<br>
+                            <span style="color: lightgray; opacity: 0.4">6</span>&nbsp; &nbsp;&nbsp;&nbsp;<b>while</b> (recording) {<br>
+                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.read();<br>
+                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder.addDataPoint('SENSOR_NAME', value);<br>
+                        <span style="color: lightgray; opacity: 0.4">9</span>&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+                        <span style="color: lightgray; opacity: 0.4">10</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder.onComplete();<br>           
+                        <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3" >
