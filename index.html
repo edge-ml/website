@@ -107,19 +107,19 @@
                 </div>
 
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5">
-                    <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(74, 85, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
+                    <div class="p-3" style="border-radius: 5px; width: 100%; background-color:rgb(54, 72, 104); color: white; font-family: 'Roboto Mono', monospace; font-size: small;">
                         <span style="color: lightgray; opacity: 0.4">1</span>&nbsp;
-                        <b>void</b>
-                        setup() {<br>
-                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder *rec = new Recorder("https://app.edge-ml.org", "API_KEY");<br>
-                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder= rec->getIncrementalRecorder("DATASET_NAME");<br>
+                        <b style="color: rgb(104, 211, 145);">void</b>
+                        <span style="color: rgb(164, 178, 255);">setup</span>() {<br>
+                        <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder <span style="color: rgb(248, 62, 239);">*</span>rec = new <span style="color: rgb(248, 62, 239);">Recorder</span>(<span style="color: rgb(255, 84, 65)">"https://app.edge-ml.org"</span>, <span style="color: rgb(255, 84, 65)">"API_KEY"</span>);<br>
+                        <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder = rec-><span style="color: rgb(248, 62, 239);">getIncrementalRecorder</span>(<span style="color: rgb(255, 84, 65)">"DATASET_NAME"</span>);<br>
                         <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }<br>
                         <br>
                         <span style="color: lightgray; opacity: 0.4">1</span>&nbsp;
-                        <b>void</b>
-                        loop() {<br>
-                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.read();<br>
-                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder->addDataPoint('SENSOR_NAME', value);<br>
+                        <b style="color: rgb(104, 211, 145);">void</b>
+                        <span style="color: rgb(164, 178, 255);">loop</span>() {<br>
+                        <span style="color: lightgray; opacity: 0.4">7</span>&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.<span style="color: rgb(248, 62, 239);">read</span>();<br>
+                        <span style="color: lightgray; opacity: 0.4">8</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder-><span style="color: rgb(248, 62, 239);">addDataPoint</span>(<span style="color: rgb(255, 84, 65)">"SENSOR_NAME"</span>, value);<br>
                         <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }
                     </div>
                 </div>
@@ -283,7 +283,7 @@
                                         <div style="font-size: medium;">The edge-ml YouTube channel aims to provide you with the latest updates, tutorials, and examples by the edge-ml developers as well as open-source contributors.</div>
                                     </div>
 
-                                    <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover" disabled>
+                                    <button style="background: rgb(248, 62, 239); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover" disabled>
                                         <b style="font-s">
                                             <i class="bi bi-youtube"></i>&nbsp; Coming Soon</b>
                                     </button>
@@ -298,7 +298,7 @@
                                             <b>Join us on Slack</b>
                                         </h5>
                                         <div style="font-size: medium;">Engage with a vibrant community of developers and companies adopting edge-ml.</div>
-                                        <button style="background: rgb(213, 63, 140); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover">
+                                        <button style="background: rgb(248, 62, 239); border: 0px solid white" onclick="openSlack()" class="btn btn-success mt-3 shrink-on-hover">
                                             <b style="font-s">Join
                                                 <i class="bi bi-arrow-right-short"></i>
                                             </b>
