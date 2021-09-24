@@ -78,19 +78,25 @@ hr {
 }
 
 
-.timeline-steps::-webkit-scrollbar {
+
+
+.timeline-wrapper {
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: scroll;
+}
+
+.timeline-wrapper::-webkit-scrollbar {
     display: none;
 }
 
 /*Timeline*/
 .timeline-steps {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    min-width: 1060px;
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
-    overflow-x: scroll;
-    width: 100%;
 }
 
 .timeline-steps .timeline-content {
