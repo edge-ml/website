@@ -1,43 +1,46 @@
 /* set custom font */
+
 body {
     font-family: 'Montserrat', sans-serif !important;
     font-size: 1.2rem;
 }
 
 .gradient-fill {
-    background: rgb(11,12,89);
-    background: linear-gradient(0deg, rgba(11,12,89,1) 0%, rgba(7,55,99,1) 100%);
+    background: rgb(11, 12, 89);
+    background: linear-gradient(0deg, rgba(11, 12, 89, 1) 0%, rgba(7, 55, 99, 1) 100%);
 }
 
 b {
     font-weight: 700;
 }
 
-
 .highlight-green {
-    border-radius: 5px; background: rgba(104, 211, 145, 0.2); color: rgb(154, 230, 180); padding: 1px 5px;
+    border-radius: 5px;
+    background: rgba(104, 211, 145, 0.2);
+    color: rgb(154, 230, 180);
+    padding: 1px 5px;
 }
 
-
 .green-circle {
-    border-radius: 5px; background: rgb(104, 211, 145); 
-    color: rgb(0, 0, 0); 
-    width: 40px; 
-    height: 40px; 
-    border-radius: 20px; 
+    border-radius: 5px;
+    background: rgb(104, 211, 145);
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 @keyframes github-highlight {
     from {
-        color: rgba(255,255,255,0.6);
+        color: rgba(255, 255, 255, 0.6);
     }
-    to { 
+    to {
         color: white;
     }
 }
 
 .github {
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
     font-size: 26px !important;
     cursor: pointer;
 }
@@ -72,4 +75,140 @@ b {
 
 hr {
     border-top: 1px solid #bbb;
+}
+
+
+
+
+/*Timeline*/
+.timeline-steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+
+.timeline-steps .timeline-content {
+    width: 8rem;
+    text-align: center
+}
+
+.timeline-steps .timeline-step, .timeline-steps .timeline-step-future {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 1.6rem
+}
+/*green bars*/
+.timeline-steps .timeline-step:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: .25rem solid rgb(104, 211, 145);
+    width: 9.8rem;
+    position: absolute;
+    right: 4.7rem;
+    top: .3125rem
+}
+
+/*green circles*/
+.timeline-steps .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(104, 211, 145);
+}
+
+.timeline-steps .timeline-content .inner-circle:before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    border-radius: 6.25rem;
+    border: 0.15rem solid rgb(104, 211, 145);
+}
+
+/*future time steps in grey*/
+.timeline-step-future .timeline-content .inner-circle {
+    border-radius: 1.5rem;
+    height: 1rem;
+    width: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(194 193 197);
+}
+
+.timeline-step-future .timeline-content .inner-circle:before {
+    content: "";
+    display: inline-block;
+    height: 1.5rem;
+    width: 1.5rem;
+    min-width: 1.5rem;
+    border-radius: 6.25rem;
+    border: 0.15rem hidden;
+}
+
+/*grey bars*/
+.timeline-steps .timeline-step-future:not(:last-child):after {
+    content: "";
+    display: block;
+    border-top: .25rem solid rgb(194 193 197);
+    width: 15.9rem;
+    position: absolute;
+    left: -6.47rem;
+    top: .3125rem
+}
+
+.timeline-steps .timeline-step-future:not(:first-child):before {
+    content: "";
+    display: block;
+    border-top: .25rem solid rgb(194 193 197);
+    width: 10rem;
+    position: absolute;
+    right: 4.26rem;
+    top: .3125rem
+}
+
+@media screen and (max-width: 1000px) {
+  
+    .timeline-steps .timeline-content {
+        width: 1.3rem;
+    }
+
+    /*green bars*/
+    .timeline-steps .timeline-step:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem solid rgb(104, 211, 145);
+        width: 3.1rem;
+        position: absolute;
+        right: 1.4rem;
+        top: .3125rem
+    }
+
+    /*grey bars*/    
+    .timeline-steps .timeline-step-future:not(:last-child):after {
+        content: "";
+        display: block;
+        border-top: .25rem solid rgb(194 193 197);
+        width: 6rem;
+        position: absolute;
+        left: -3rem;
+        top: .3125rem
+    }
+
+    .timeline-steps .timeline-step-future:not(:first-child):before {
+        content: "";
+        display: block;
+        border-top: .25rem solid rgb(194 193 197);
+        width: 4.2rem;
+        position: absolute;
+        right: .26rem;
+        top: .3125rem
+    }
+    
 }
