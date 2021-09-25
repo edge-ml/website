@@ -150,7 +150,12 @@ hr {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(194 193 197);
+    background-color: rgb(194, 193, 197,);
+}
+
+.timeline-step-future-partial {
+    background: rgb(104,211,145) !important;
+    background: linear-gradient(130deg, rgba(104,211,145,1) 0%, rgba(104,211,145,1) 60%, rgba(194,193,197,1) 60%, rgba(194,193,197,1) 100%) !important;
 }
 
 .timeline-step-future .timeline-content .inner-circle:before {
