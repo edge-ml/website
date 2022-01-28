@@ -134,11 +134,10 @@
                         <b>DATA INJECTION</b>
                     </div>
                     <div>
-                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">CSV</span>
-                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Arduino</span>
-                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Python</span>
-                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Node.js</span>
-                        <span style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px" class="badge badge-secondary">Android</span>
+                        <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none;" class="badge badge-secondary shrink-on-hover" onclick="openCSVDoc()">CSV</button>
+                        <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none;" class="badge badge-secondary shrink-on-hover" onclick="openArduinoDoc()">Arduino</button>
+                        <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none" class="badge badge-secondary shrink-on-hover" onclick="openNodeDoc()">Node.js</button>
+                        <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none" class="badge badge-secondary shrink-on-hover" onclick="openAndroidDoc()">Android</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 d-flex flex-column align-items-center">
@@ -558,6 +557,22 @@
             function joinDiscussion() {
                 window.open("https://github.com/edge-ml/edge-ml/discussions", '_blank').focus();
 
+            }
+
+            function openCSVDoc() {
+                window.open("https://github.com/edge-ml/edge-ml/wiki#CSV-Header-Format", '_blank').focus();
+            }
+
+            function openArduinoDoc() {
+                window.open("https://github.com/edge-ml/EdgeML-Arduino", '_blank').focus();
+            }
+
+            function openNodeDoc() {
+                window.open("https://github.com/edge-ml/node", '_blank').focus();
+            }
+
+            function openAndroidDoc() {
+                window.open("https://github.com/edge-ml/java", '_blank').focus();
             }
 
 
