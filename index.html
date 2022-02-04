@@ -138,6 +138,7 @@
                         <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none;" class="badge badge-secondary shrink-on-hover" onclick="openArduinoDoc()">Arduino</button>
                         <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none" class="badge badge-secondary shrink-on-hover" onclick="openNodeDoc()">Node.js</button>
                         <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none" class="badge badge-secondary shrink-on-hover" onclick="openAndroidDoc()">Android</button>
+                        <button style="background: #e2e8f0; color: black; font-weight: 700; padding: 15px; border: none" class="badge badge-secondary shrink-on-hover" onclick="openPythonDoc()">Python</button>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 d-flex flex-column align-items-center">
@@ -574,7 +575,10 @@
             function openAndroidDoc() {
                 window.open("https://github.com/edge-ml/java", '_blank').focus();
             }
-
+            
+            function openPythonDoc() {
+                window.open("https://github.com/edge-ml/python", '_blank').focus();
+            }
 
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
