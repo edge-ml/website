@@ -36,7 +36,7 @@
         </style>
     </head>
     <body style="background: white">
-        <div class="container-fluid">
+        <div class="container-fluid  gradient-fill " >
             <div class="row" style="color: white !important">
                 <div class="col-12">
                     <div style="position: absolute; top: 20px; left: 20px; font-size: 20px; color: white;">
@@ -50,22 +50,30 @@
                         </b>
                     </div>
                 </div>
-                <div class="col-12 gradient-fill text-center d-flex flex-column justify-content-center" style="height: 80vh">
-
-                    <div class="align-self-center" style="font-size: 1.7em; max-width: 700px">
-                        <b>Machine Learning for Microcontrollers</b>
+                <div class="container" style="max-width: 1320px; padding: 0px;">
+                    <div class="row m-0" style="min-height: 80vh">
+                        <div class="col-12 col-lg-6 text-left d-flex flex-column justify-content-center mt-5 mt-lg-0 m-0" >
+                            <div class="align-self-start ml-4" style="font-size: 2.2em; line-height: 1.1em; max-width: 700px">
+                                <b>Machine Learning for Microcontrollers</b>
+                            </div>
+                            <div class="mt-4" style="max-width: 600px; font-size: 18px; line-height: 30px;">edge-ml is an
+                                <span class="highlight-green">open-source</span> and <span class="highlight-green">browser-based</span> toolchain
+                                for machine learning on microcontrollers.</div>
+        
+                            <button onclick="openDemo()" class="btn btn-success align-self-start mt-4 shrink-on-hover" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;">
+                                <b>Try edge-ml now
+                                    <i class="bi bi-arrow-right"></i>
+                                </b>
+                            </button>
+                            
+                        </div>
+                        <div class="col-12 col-lg-4 d-flex align-items-center justify-content-center flex-column flex-grow-1 p-0" >
+                            <div id="animation-canvas"  style="width: 100%; height: 400px;"></div>
+                        </div>
                     </div>
-                    <div class="align-self-center mt-4" style="max-width: 600px; font-size: 20px; line-height: 30px;">edge-ml is an
-                        <span class="highlight-green">open-source</span> and <span class="highlight-green">browser-based</span> toolchain
-                        for machine learning on microcontrollers.</div>
-
-                    <button onclick="openDemo()" class="btn btn-success align-self-center mt-4 shrink-on-hover" style="background: rgb(72, 187, 120) !important; padding: 12px 15px;">
-                        <b>Try edge-ml now
-                            <i class="bi bi-arrow-right"></i>
-                        </b>
-                    </button>
 
                 </div>
+                
                 <div class="col-12 d-flex justify-content-center animate__animated animate__bounce animate__slow animate__infinite" style="margin-top: -50px">
                     <h1>
                         <i class="bi bi-caret-down"></i>
@@ -543,8 +551,10 @@
             </div>
         </div>
 
-
+        <script id="threejs" async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.js"></script>
+        
         <script>
+            
             function openGithub() {
                 window.open("https://github.com/edge-ml", '_blank').focus();
             }
@@ -590,6 +600,174 @@
             function openPythonDoc() {
                 window.open("https://github.com/edge-ml/python", '_blank').focus();
             }
+
+            'use strict';
+
+var camera, scene, renderer;
+
+var cylinders = [];
+var isDragging = false;
+var lastY = undefined;
+var currentY = undefined;
+var reqAnimFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;
+var spinDirection = -1;
+
+var script = document.querySelector('#threejs');
+    script.addEventListener('load', function() {
+        init();
+        render();   
+});
+
+
+
+function createBoxWithRoundedEdges( width, height, depth, radius0, smoothness ) {
+  let shape = new THREE.Shape();
+  let eps = 0.00001;
+  let radius = radius0 - eps;
+  shape.absarc( eps, eps, eps, -Math.PI / 2, -Math.PI, true );
+  shape.absarc( eps, height -  radius * 2, eps, Math.PI, Math.PI / 2, true );
+  shape.absarc( width - radius * 2, height -  radius * 2, eps, Math.PI / 2, 0, true );
+  shape.absarc( width - radius * 2, eps, eps, 0, -Math.PI / 2, true );
+  let geometry = new THREE.ExtrudeBufferGeometry( shape, {
+    amount: depth - radius0 * 2,
+    bevelEnabled: true,
+    bevelSegments: smoothness * 2,
+    steps: 1,
+    bevelSize: radius,
+    bevelThickness: radius0,
+    curveSegments: smoothness
+  });
+  
+  geometry.center();
+  
+  return geometry;
+}
+
+
+
+function init() {
+
+    scene = new THREE.Scene();
+    var canvas = document.getElementById("animation-canvas");
+    canvas.addEventListener('mousedown', function(e) {
+        currentY = e.y;
+        isDragging = true;
+    });
+    window.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            lastY = currentY;
+            currentY = e.y;
+        }
+    })
+    window.addEventListener('mouseup', function(e) {
+        currentY = undefined;
+        lastY = undefined;
+        isDragging = false;
+    })
+    camera = new THREE.PerspectiveCamera(40, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
+
+    // renderer
+
+    renderer = new THREE.WebGLRenderer({
+        alpha: true,
+        antialias: true
+    });
+    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+    document.getElementById("animation-canvas").appendChild(renderer.domElement);
+
+    camera.position.z = 12;
+
+    // Mesh - cube
+
+
+    var material = new THREE.MeshLambertMaterial({
+        color: 0x3cf079,
+        emissive: 0x3cf079
+    });
+    for (var i = 0; i < 7; i++) {
+      var offset = -3 + i;
+      var abs_offset = Math.abs(offset);
+
+      const geometry = createBoxWithRoundedEdges(0.8, 8 - abs_offset * 2.1, 0.8, 0.4, 60)
+    	var cylinder = new THREE.Mesh(geometry, material);
+      cylinder.rotation.x += i * 0.15
+      
+      cylinder.position.set(offset * -1.2, 0, 0);
+      scene.add(cylinder);
+      cylinders.push(cylinder);
+    }
+    
+
+    // Light
+
+    var pointLight = new THREE.PointLight(0xFFFFFF);
+
+    pointLight.position.x = 10;
+    pointLight.position.y = 50;
+    pointLight.position.z = 130;
+
+    scene.add(pointLight);
+    
+    
+
+    // events
+
+    window.addEventListener('resize', onWindowResize, false);
+
+}
+
+
+function render() {
+
+    reqAnimFrame(render);
+
+    var delta = 0.01;
+		
+    cylinders.forEach((cylinder) => {
+    	cylinder.rotation.x = cylinder.rotation.x % (2 * 3.14);
+    	var speed = 0.03;
+      if (cylinder.rotation.x < 1) {
+      	speed = 0.01;
+      }
+
+      if (!isDragging) {
+        cylinder.rotation.x -= spinDirection * (Math.random() * speed);
+        
+      } else {
+        if (currentY != lastY && currentY !== undefined && lastY !== undefined) {
+            cylinder.rotation.x += 0.3 * (currentY - lastY) * Math.random() * 0.1;
+            
+        }
+      }
+
+      
+    });
+
+    if (lastY > currentY && lastY !== currentY) {
+        spinDirection = 1;
+    } else if (lastY < currentY && lastY !== currentY) {
+        spinDirection = -1;
+    }
+    
+
+    lastY = currentY;
+
+    
+    
+
+    renderer.render(scene, camera);
+
+}
+
+function onWindowResize(event) {
+    var canvas = document.getElementById("animation-canvas");
+    renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
+
+    camera.aspect = canvas.offsetWidth / canvas.offsetHeight;
+    camera.updateProjectionMatrix();
+
+}
+
 
             $(document).ready(function () {
                 $('[data-toggle="tooltip"]').tooltip();
