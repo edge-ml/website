@@ -664,7 +664,9 @@ function init() {
         lastY = undefined;
         isDragging = false;
     })
-    camera = new THREE.PerspectiveCamera(40, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
+
+
+    camera = new THREE.PerspectiveCamera(45, canvas.offsetWidth / canvas.offsetHeight, 0.1, 1000);
 
     // renderer
 
@@ -764,6 +766,7 @@ function onWindowResize(event) {
     renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
 
     camera.aspect = canvas.offsetWidth / canvas.offsetHeight;
+
     camera.updateProjectionMatrix();
 
 }
