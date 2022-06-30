@@ -195,14 +195,14 @@
                         <span style="color: rgb(164, 178, 255);">setup</span>() {<br>
                         <span style="color: lightgray; opacity: 0.4">2</span>&nbsp; &nbsp;&nbsp;&nbsp;Recorder <span style="color: rgb(248, 62, 239);">*</span>rec = new <span style="color: rgb(248, 62, 239);">Recorder</span>(<span style="color: rgb(255, 84, 65)">"https://app.edge-ml.org"</span>, <span style="color: rgb(255, 84, 65)">"API_KEY"</span>);<br>
                         <span style="color: lightgray; opacity: 0.4">3</span>&nbsp; &nbsp;&nbsp;&nbsp;edgeRecorder = rec-><span style="color: rgb(248, 62, 239);">getIncrementalRecorder</span>(<span style="color: rgb(255, 84, 65)">"DATASET_NAME"</span>);<br>
-                        <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }<br>
+                        <span style="color: lightgray; opacity: 0.4">4</span>&nbsp; }<br>
                         <br>
-                        <span style="color: lightgray; opacity: 0.4">1</span>&nbsp;
+                        <span style="color: lightgray; opacity: 0.4">6</span>&nbsp;
                         <b style="color: rgb(104, 211, 145);">void</b>
                         <span style="color: rgb(164, 178, 255);">loop</span>() {<br>
                         <span style="color: lightgray; opacity: 0.4">7</span>&nbsp;&nbsp;&nbsp;&nbsp;value = sensor.<span style="color: rgb(248, 62, 239);">read</span>();<br>
                         <span style="color: lightgray; opacity: 0.4">8</span>&nbsp;&nbsp;&nbsp;&nbsp;edgeRecorder-><span style="color: rgb(248, 62, 239);">addDataPoint</span>(<span style="color: rgb(255, 84, 65)">"SENSOR_NAME"</span>, value);<br>
-                        <span style="color: lightgray; opacity: 0.4">11</span>&nbsp; }
+                        <span style="color: lightgray; opacity: 0.4">9</span>&nbsp; }
                     </div>
                 </div>
                 <div class="col-12 col-md-6 d-flex justify-content-center flex-column pt-5 pb-5 align-items-end mb-3">
