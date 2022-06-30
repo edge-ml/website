@@ -734,7 +734,7 @@ function init() {
       var offset = -3 + i;
       var abs_offset = Math.abs(offset);
 
-      const geometry = createBoxWithRoundedEdges(0.8, 8 - abs_offset * 2.1, 0.8, 0.4, 60)
+      const geometry = createBoxWithRoundedEdges(0.8, 8 - abs_offset * 2.1, 0.8, 0.3, 60)
     	var cylinder = new THREE.Mesh(geometry, material);
       cylinder.rotation.x += i * 0.15
       
